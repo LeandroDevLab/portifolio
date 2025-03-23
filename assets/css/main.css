@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+a{
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebdcc4;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* EDIÇÃO DA ÁREA APRESENTAÇÃO */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#bqinicial {
+    color: #ebdcc4;
+    margin: 3rem 50% 2rem 2rem;
+}
+.container img {
+    width: 70%;
+    padding-bottom: 2rem;
+}
+
+.apresentacao {
+    background-image: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, .95),
+        rgba(0, 0, 0, 0.4),
+        rgba(49, 168, 221, 0.1),
+        rgba(49, 168, 221, 0.03)),
+        url('/assets/img/coding1.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* EDIÇÃO DA ÁREA SOBRE MIM */
+
+
+div#imgsobre{
+    width: 40%;
+    justify-items: right;
+}
+
+div#imgsobre img{
+    max-width: 80%;
+    height: auto;
+    padding: 2rem 0;
+    display: block;
+    filter: none;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+div#sobre{
+    width: 50%;
+    margin: 2rem 4rem 2rem auto;
+    text-align: justify;
+    padding: 1rem;
+}
+#sobre p{
+    padding: .5rem;
+    text-align: justify;
+}
+
+#sobre blockquote{
+    padding: 2rem;
+}
+
+/* EDIÇÃO ****** PROJETOS ********* EDIÇÃO */
+#projetos {
+    background-color: #181818;
+    color: #ebdcc4;
+}
+
+#projetos img {
+    width: 250px;
+    height: 250px;
+}
+
+#projetos h1{
+    text-align: center;
+    padding: 4rem;
+
+}
+.content2 {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Usa toda a altura da tela */
+}
+
+#projetin {
+    text-shadow: 2px 3px 5px #000;
+    justify-items: center;
+}
+
+#projetin button{
+    margin: 5px auto;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #000;
+    transition: 0.5s ease-in-out;  /* Suaviza a transição */
+}
+
+#projetin button:hover{
+    background-color: #008000e0;
+    transform: scale(1.15); /* Aumenta 15% no hover */
+}
+
+button a{
+    text-decoration: none;
+    text-transform: none;
+    color: #000;
+}
+
+
+/* Primeira div centralizada */
+.fixed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: justify;
+    height: 100vh; /* Ajuste conforme necessário */
+    background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(49, 168, 221, 0.8), rgba(0, 0, 0, .9)) , url('/assets/img/coding3.jpg');
+    background-size: cover;
+    color: #e7e1d7;
+    width: 30%;
+}
+
+
+/* Segunda div com rolagem */
+.scroll-content {
+    overflow-y: auto; /* Ativa a rolagem vertical */
+    background-color: #ffff;
+    color: #181818;
+    width: 100%;
+}
+
+
+
+.scroll-content h3{
+    padding: 1rem 3rem;
+    border-radius: 9px;
+    box-shadow:  2px 3px 5px #000;
+    text-shadow: 1px 2px 3px #00000079;
+}
+
+.projeto{
+    display:flex;
+    margin: 2rem;
+    padding: 2rem 0 ;
+    border-radius: 20px;
+    box-shadow: inset 0 10px 20px #0000003a, 0 5px 10px #000;
+    transition: .5s ease-in-out;
+}
+
+.projeto:hover{
+    transform: scale(1.03); /* Aumenta 3% no hover */
+}
+
+/*Aqui vou pegar os itens alternados EVEN=Pares e ODD=ímpares e direcionar uma edição*/
+.projeto:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+div.imagem{
+    align-items: center;
+}
+
+.imagem > img{
+    margin: 1rem;
+    border-radius: 50px;
+    box-shadow:  -2px -3px 5px #0000007e ,2px 3px 5px #000;
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.imagem > img:hover{
+    transform: scale(1.05); /* Aumenta 5% no hover */
+}
+
+.projeto .conteudo{
+    justify-content: center;
+    text-align: justify;
+    justify-items: center;
+    padding: 1rem;
+    margin: auto;
+}
+
+.projeto .conteudo p{
+    padding: 1rem;
+    text-align: justify;
+}
+
+
+
+/* Ícone do menu hambúrguer */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.bar {
+    width: 2rem;
+    height: .25rem;
+    background: white;
+    border-radius: 5px;
+}
+
+/* Menu lateral */
+.nav-menu {
+    position: fixed;
+    top: 5rem;
+    right: -250px; /* Começa fora da tela */
+    width: 250px;
+    height: 100%;
+    background: #181818;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 60px 20px;
+}
+
+.nav-menu ul li {
+    margin: 15px 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    position: relative;
+}
+
+/*ADICIONANDO UMA LINHA BRANCA NA NAV A : animação*/
+.nav-menu ul li a::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+.nav-menu ul li a:hover::after{
+    width: 100%;
+}
+
+/* Quando o menu estiver ativo */
+.nav-menu.active {
+    right: 0;
+}
+
+footer {
+    padding: 3rem;
+    background-color: #181818;
+    color: #ebdcc4;
+    text-align: left;
+}
+
+footer h4, p, a {
+    text-align: left;
+    padding: 1rem;
+}
+
+footer h1 {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+footer .content{
+    background-color: #181818;
+    padding: 2rem;
+    color: #ebdcc4;
+}
+
+footer img{
+    height: 400px;
+    width: 100%;
+    filter: none;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 51%, rgba(0, 0, 0, 0) 81%);
+}
+
+footer a{
+    text-decoration: none;
+    text-transform: none;
+    color: #ebdcc4;
+    padding-top: 1rem;
+}
+
+footer a:hover{
+    color: #ff0000;
+}
+
+@media screen and (max-width: 420px) {
+    footer h1 {
+        font-size: 2rem;
+    }
+    p{
+        font-size: smaller;
+    }
+    .container img {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container img {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 840px) {
+     .container, .content, .content2 {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        margin: auto;
+        padding: 0;
+     }
+     div.content2 .fixed-content{
+        display: none;
+     }
+     div#imgsobre{
+        width: 200px;
+    }
+    
+    div#imgsobre img{
+        display: none;
+        padding: 2rem 0;
+    }
+    
+    div#sobre{
+        width: 80%;
+        margin: auto;
+        text-align: justify;
+        padding: 1rem;
+    }
+    #sobre p{
+        padding: .5rem;
+    }
+    
+    #sobre blockquote{
+        padding: 2rem;
+    }
+
+    .projeto{
+        display:flex;
+        flex-direction: column;
+        margin: 3rem 0;
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    .projeto:nth-child(even){
+        flex-direction: column;
+    }
+
+    footer img{
+        height: 200px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+}
+
+/*Fazendo a entrada de elemento com nome de classe TEXTO com JAVASCRIPT*/
+.texto {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}

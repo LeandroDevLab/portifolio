@@ -147,7 +147,7 @@ button a{
     padding: 2rem;
     text-align: justify;
     height: 100vh; /* Ajuste conforme necessário */
-    background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(49, 168, 221, 0.8), rgba(0, 0, 0, .9)) , url('/assets/img/coding3.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(49, 168, 221, 0.8), rgba(0, 0, 0, .9)) , url('./assets/img/coding3.jpg');
     background-size: cover;
     color: #e7e1d7;
     width: 30%;
